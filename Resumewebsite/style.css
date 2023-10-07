@@ -1,0 +1,101 @@
+.body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(img/droplet2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-control {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.text-bg-color {
+    background-color: rgb(6, 6, 21);
+}
+
+.Nav {
+    height: 300px;
+}
+
+.h1 {
+    margin-top: 50px;
+}
+
+.menu {
+    width: 400px;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    display: flex;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.menu li {
+    padding-left: 40px;
+}
+
+
+/* Style the dropdown submenu */
+
+.dropdown-menu {
+    padding-right: 30px;
+}
+
+
+/* Show the dropdown submenu when hovering over the parent list item */
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.section {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.water-droplet {
+    background-image: url(img/Buble.png);
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 28%;
+    bottom: -50%;
+}
+
+.footer {
+    height: 200px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: aliceblue;
+}
+
+.footer1 {
+    height: 500px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: aliceblue;
+}
+
+.contact-info {
+    position: absolute;
+    left: 150px;
+}
+
+.social-medias {
+    position: absolute;
+}
+
+.links {
+    position: absolute;
+    right: 150px;
+}

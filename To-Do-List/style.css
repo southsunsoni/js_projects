@@ -1,0 +1,51 @@
+form {
+    background-color: grey;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#todo {
+    border-radius: 30%;
+    width: 40%;
+    height: 10%;
+    text-align: center;
+}
+
+#delete {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#add {
+    width: 100%;
+}
+
+
+/* Style the dropdown menu */
+
+.dropdown {
+    position: relative;
+}
+
+
+/* Style the dropdown submenu */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+
+/* Show the dropdown submenu when hovering over the parent list item */
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
