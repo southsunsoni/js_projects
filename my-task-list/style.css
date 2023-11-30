@@ -1,0 +1,66 @@
+body{
+    background-color: aqua;
+    
+}
+.Todolist{
+    position: relative;
+    top: 30%;
+    left: 45%;
+}
+.TaskList{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: antiquewhite;
+    width: 500px;
+    height: 150px;
+    
+}
+#main{
+    display: inline-block;
+    background-color: azure;
+    position: relative;
+    left: 20%;
+    bottom: 20%;
+}
+#Dropdown{
+    display: none;
+    width: 100%;
+    background-color: aquamarine;
+}
+#Enter{
+    z-index: 1;
+    
+}
+#Display{
+    top: 40px;
+    left: 0px;
+    z-index: 2;
+    
+}
+#Delete{
+    top: 80px;
+    left: 0px;
+    z-index: 3;
+
+}
+.button{
+    
+    display: inline-block;
+    position:absolute;
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 50%;
+
+}
+#control{
+    display: inline-block;
+    background-color: aqua;
+    position: relative;
+    left: 20%;
+    top: 5%;
+    height: 70%;
+
+}
