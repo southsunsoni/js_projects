@@ -107,9 +107,16 @@ clear.addEventListener('click',function(){
     accumulator="";
     input.value=accumulator;
 })
+expos.addEventListener('click',function(){
+    input.value="e^("+input.value+")";
+})
 pie.addEventListener('click',function(){
-    variable="π";
-    input.value=variable;
+    input.value="π";
+})
+log.addEventListener('click',function(){
+
+    input.value="log("+input.value+")";
+   
 })
 sin.addEventListener('click',function(){
 
@@ -128,33 +135,74 @@ tan.addEventListener('click',function(){
 })
 
 equal.addEventListener('click',function(){
-    var regex = /\((.*?)°\)/; // Regular expression to match the value within '(' and '°)'
-    var match = input.value.match(regex);
     if(input.value=='π'){
         accumulator+=3.14;
         input.value=accumulator;
         accumulator='';
     }
-
-    if (match) {
-       angle = match[1];}
-
-    console.log(input.value);
-    console.log(angle);
-    if(input.value.includes("sin")){
-        result=Math.sin(angle)
+    if(input.value.includes("sin")){try{
+        var regex = /\((.*?)°\)/; // Regular expression to match the value within '(' and '°)'
+        var match = input.value.match(regex);
+        if (match) {
+            var expresion= match[1];}
+            alert(expresion);
+        result=Math.sin(expresion);
         input.value=result;
         console.log(result)
-    }else if(input.value.includes("cos")){try{
-        result=Math.cos(angle)
+    }catch(error){
+        input.value='erreur'
+        input.value=''
+
+    }}else if(input.value.includes("cos")){try{
+        var regex = /\((.*?)°\)/; // Regular expression to match the value within '(' and '°)'
+        var match = input.value.match(regex);
+        if (match) {
+            var expresion= match[1];}
+            alert(expresion);
+        result=Math.cos(expresion)
         input.value=result;
         console.log(result)
     }catch(error){
         input.value='erreur'
         input.value=''
     }
-    }else if(input.value.includes("tan")){
-        result=Math.tan(angle)
+    }else if(input.value.includes("e")){try{
+            var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
+            var match = input.value.match(regex);
+            if (match) {
+                var expresion= match[1];}
+            if(expresion==''){
+                expresion=1;
+            }
+        result=Math.exp(expresion)
+        input.value=result;
+        console.log(result)
+    }catch(error){
+        input.value='erreur'
+        input.value=''
+    }
+}else if(input.value.includes("log")){try{
+    var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
+    var match = input.value.match(regex);
+    if (match) {
+        var expresion= match[1];}
+    if(expresion==''){
+        expresion=1;
+    }
+result=Math.log(expresion)
+input.value=result;
+console.log(result)
+}catch(error){
+input.value='erreur'
+input.value=''
+}
+}else if(input.value.includes("tan")){
+        var regex = /\((.*?)°\)/; // Regular expression to match the value within '(' and '°)'
+        var match = input.value.match(regex);
+        if (match) {
+            var expresion= match[1];}
+            alert(expresion);
+        result=Math.tan(expresion)
         input.value=result;
         console.log(result)
     }else if(input.value==accumulator)try{
