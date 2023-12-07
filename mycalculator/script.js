@@ -107,6 +107,10 @@ clear.addEventListener('click',function(){
     accumulator="";
     input.value=accumulator;
 })
+pie.addEventListener('click',function(){
+    variable="π";
+    input.value=variable;
+})
 sin.addEventListener('click',function(){
 
     input.value="sin("+input.value+"°)";
@@ -126,6 +130,11 @@ tan.addEventListener('click',function(){
 equal.addEventListener('click',function(){
     var regex = /\((.*?)°\)/; // Regular expression to match the value within '(' and '°)'
     var match = input.value.match(regex);
+    if(input.value=='π'){
+        accumulator+=3.14;
+        input.value=accumulator;
+        accumulator='';
+    }
 
     if (match) {
        angle = match[1];}
