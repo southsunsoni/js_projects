@@ -103,9 +103,13 @@ function addoperator(operator){
     accumulator+=operator
     input.value=accumulator;
 }
+
 clear.addEventListener('click',function(){
     accumulator="";
     input.value=accumulator;
+})
+power.addEventListener('click',function(){
+    input.value=""+input.value+"^("+input.value+")"
 })
 expos.addEventListener('click',function(){
     input.value="e^("+input.value+")";
@@ -166,7 +170,28 @@ equal.addEventListener('click',function(){
         input.value='erreur'
         input.value=''
     }
-    }else if(input.value.includes("e")){try{
+    }else if(input.value.includes(""+input.value+"")){
+        if(input.value.includes("2")){
+            var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
+            var match = input.value.match(regex);
+            if (match) {
+                var expresion= match[1];}
+        result=Math.pow(expresion)
+        input.value=result;
+        }
+        else{
+            var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
+            var match = input.value.match(regex);
+            if (match) {
+                var expresion= match[1];}
+            
+            if(expresion==''){
+                expresion=1;/* i am here*/
+            }
+
+        }
+    }
+    else if(input.value.includes("e")){try{
             var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
             var match = input.value.match(regex);
             if (match) {

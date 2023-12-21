@@ -41,5 +41,5 @@ questionair.appendChild(element);
 element1=document.createElement('h3');
 element1.innerText=list_de_Questions[0].Question_ans1;
 reponse1.appendChild(element1);
-alert(reponse1.appendChild(element1));
+alert();
 
