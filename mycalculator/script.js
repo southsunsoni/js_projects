@@ -108,8 +108,10 @@ clear.addEventListener('click',function(){
     accumulator="";
     input.value=accumulator;
 })
-power.addEventListener('click',function(){
-    input.value=""+input.value+"^("+input.value+")"
+squareroot.addEventListener('click',function(){
+    input.value="√("+input.value+")";
+
+    
 })
 expos.addEventListener('click',function(){
     input.value="e^("+input.value+")";
@@ -137,14 +139,49 @@ tan.addEventListener('click',function(){
     input.value="tan("+input.value+"°)";
    
 })
-
+square.addEventListener('click',function(){
+    input.value="("+input.value+")^2";
+})
+invers.addEventListener('click',function(){
+    input.value="("+input.value+")^-1";
+})
 equal.addEventListener('click',function(){
     if(input.value=='π'){
         accumulator+=3.14;
         input.value=accumulator;
         accumulator='';
     }
-    if(input.value.includes("sin")){try{
+    if(input.value.includes("^-1")){
+        var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
+        var match = input.value.match(regex);
+        if (match) {
+            var expresion= match[1];
+        
+        }
+        result=Math.pow(expresion,-1);
+        input.value=result;
+    }
+    if(input.value.includes("^2")){
+        var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
+        var match = input.value.match(regex);
+        if (match) {
+            var expresion= match[1];
+        
+        }
+        result=Math.pow(expresion,2);
+        input.value=result;
+    }
+    if(input.value.includes("√")){
+        var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
+        var match = input.value.match(regex);
+        if (match) {
+            var expresion= match[1];
+        
+        }
+        result=Math.sqrt(expresion);
+        input.value=result;
+    }
+    if(input.value.includes("sin")){
         var regex = /\((.*?)°\)/; // Regular expression to match the value within '(' and '°)'
         var match = input.value.match(regex);
         if (match) {
@@ -152,12 +189,7 @@ equal.addEventListener('click',function(){
             alert(expresion);
         result=Math.sin(expresion);
         input.value=result;
-        console.log(result)
-    }catch(error){
-        input.value='erreur'
-        input.value=''
-
-    }}else if(input.value.includes("cos")){try{
+}else if(input.value.includes("cos")){
         var regex = /\((.*?)°\)/; // Regular expression to match the value within '(' and '°)'
         var match = input.value.match(regex);
         if (match) {
@@ -165,33 +197,8 @@ equal.addEventListener('click',function(){
             alert(expresion);
         result=Math.cos(expresion)
         input.value=result;
-        console.log(result)
-    }catch(error){
-        input.value='erreur'
-        input.value=''
-    }
-    }else if(input.value.includes(""+input.value+"")){
-        if(input.value.includes("2")){
-            var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
-            var match = input.value.match(regex);
-            if (match) {
-                var expresion= match[1];}
-        result=Math.pow(expresion)
-        input.value=result;
-        }
-        else{
-            var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
-            var match = input.value.match(regex);
-            if (match) {
-                var expresion= match[1];}
-            
-            if(expresion==''){
-                expresion=1;/* i am here*/
-            }
-
-        }
-    }
-    else if(input.value.includes("e")){try{
+}
+    else if(input.value.includes("e")){
             var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
             var match = input.value.match(regex);
             if (match) {
@@ -202,11 +209,7 @@ equal.addEventListener('click',function(){
         result=Math.exp(expresion)
         input.value=result;
         console.log(result)
-    }catch(error){
-        input.value='erreur'
-        input.value=''
-    }
-}else if(input.value.includes("log")){try{
+}else if(input.value.includes("log")){
     var regex = /\((.*?)\)/; // Regular expression to match the value within '(' and '°)'
     var match = input.value.match(regex);
     if (match) {
@@ -214,13 +217,9 @@ equal.addEventListener('click',function(){
     if(expresion==''){
         expresion=1;
     }
-result=Math.log(expresion)
-input.value=result;
-console.log(result)
-}catch(error){
-input.value='erreur'
-input.value=''
-}
+    result=Math.log(expresion)
+    input.value=result;
+    console.log(result)
 }else if(input.value.includes("tan")){
         var regex = /\((.*?)°\)/; // Regular expression to match the value within '(' and '°)'
         var match = input.value.match(regex);
@@ -235,7 +234,7 @@ input.value=''
             input.value=result;
             accumulator=result.toString();
         }catch(error){
-            input.value='erreur'
+            input.value='erreur';
             accumulator='';
         }
     })
