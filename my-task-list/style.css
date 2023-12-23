@@ -17,32 +17,46 @@ body{
     height: 150px;
     
 }
+#inputfield{
+    
+}
 #main{
     display: inline-block;
     background-color: azure;
     position: relative;
     left: 20%;
-    bottom: 20%;
+    bottom: 10%;
 }
+.Arrow{
+    padding-right: 25px;
+}
+.Arrow-icon{
+    position:absolute;
+    cursor: pointer;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    pointer-events: all;
+    color: blue;
+}
+
 #Dropdown{
-    display: none;
+    overflow: hidden;
     width: 100%;
-    background-color: aquamarine;
+    height: 0px;
+    position:absolute;
+    transition: 1s ease;
+
 }
 #Enter{
-    z-index: 1;
+
+    top: 45px;
     
 }
-#Display{
-    top: 40px;
-    left: 0px;
-    z-index: 2;
-    
-}
+
 #Delete{
-    top: 80px;
-    left: 0px;
-    z-index: 3;
+    top: 45px;
+    left: 100px;
 
 }
 .button{
