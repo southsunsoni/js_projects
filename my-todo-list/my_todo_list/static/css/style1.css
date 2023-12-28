@@ -7,7 +7,7 @@
     top: 200px;
 }
 #dropdown{
-    background-color: rgb(156, 156, 241);
+    background-color: rgb(2, 2, 13);
     width: 800px;
     height: 1px;
     display: flex;
@@ -21,33 +21,32 @@
     background-color: rgb(141, 141, 204);
     position: relative;
     left: 250px;
-    top: 25px;
-    width: 100px;
+    top: 10px;
+    width: 120px;
     height: 20px;
     z-index: 2;
+    display: flex;
+    align-items: center;
 }
 #displaytask{
     background-color: rgb(141, 141, 204);
     position: relative;
-    width: 100px;
+    width: 150px;
     height: 20px;
     left: 300px;
-    top: 25px;
+    top: 10px;
     z-index: 2;
+    display: flex;
+    align-items: center;
 }
 #dropdiv{
-    background-color: rgb(35, 35, 240);
+    background-color:  rgb(141, 141, 204);
     width: 800px;
-    height: 10px;
+    height: 100px;
     display: flex;
     position: relative;
-    top: 50px;
+    top: 25px;
     left: -100px;
     
        
-}
-#text{
-    background-color: antiquewhite;
-    width: 200px;
-    height: 300px;
 }
