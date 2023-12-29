@@ -1,7 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from django.core import serializers
 from django.http import JsonResponse
+from django.shortcuts import render
 from . import db
 from .models import My_tasks
 def home_page_view(request):
@@ -9,7 +8,7 @@ def home_page_view(request):
     return render(request,'home.html')
 def display_view(request):
     tasks=My_tasks.objects.all()
-    serialized_data=serializers.serialize('json',tasks)
-    #return HttpResponse('this is my form view')
-    return JsonResponse(serialized_data,safe=False)
+    data=list(tasks.values())
+    #return render(request,'form.html',context={'tasks':data})
+    return JsonResponse(data,safe=False)
 
