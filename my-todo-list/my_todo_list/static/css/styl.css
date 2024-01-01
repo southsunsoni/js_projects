@@ -39,15 +39,32 @@
     display: flex;
     align-items: center;
 }
+
 #drop-div{
     background-color:  rgb(141, 141, 204);
     width: 800px;
     display: flex;
-    flex-direction: column;
-    overflow: auto;
+    overflow-y: auto;
     position: relative;
+    flex-direction: column;
     top: 100px;
+    height: 100px;
     left: -100px;
-    transition: 1s ease-in;
+    align-items: center;
+    
     
 }
+/* CSS */
+#drop-div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Adjust the transition speed as needed */
+    /* Additional styling for visibility purposes */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+
+
+
