@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(77, 77, 128);
+}
+#main-window{
+    background-color: aliceblue;
+    height: 300px;
+    width: 100%;
+    display: block;
+    }
+.button{
+    background-color:rgb(77, 77, 128); ;
+    height: 20px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+
+    margin-left: 268px;
+}
+#cross-bar{
+    background-color: black;
+    height: 1px;
+    position: relative;
+    left: 18%;
+    width: 910px;
+}
+#display-task{
+    background-color:rgb(77, 77, 128) ;
+    height: 100px;
+    overflow: hidden;
+    margin-top: 22px;
+    width: 910px;
+    position: relative;
+    left: 18.5%;
+    transition: 1s ease;
+}
+
